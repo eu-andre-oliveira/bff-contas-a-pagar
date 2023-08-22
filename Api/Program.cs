@@ -12,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //builder.Services.AddCors(builder.Configuration["Cors:Authorize"]);
 builder.Services.RegisterServices(builder.Configuration);
+builder.Services.AddDatabase(builder.Configuration);
 
 builder.Host.UseDefaultServiceProvider(options =>
 {

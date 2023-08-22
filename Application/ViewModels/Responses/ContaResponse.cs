@@ -1,6 +1,6 @@
 ﻿namespace Application.Responses
 {
-    public class ContasResponse
+    public class ContaResponse
     {
         public int Id { get; set; }
         public string DataVencimento { get; set; }

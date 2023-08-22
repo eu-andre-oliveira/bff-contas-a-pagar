@@ -1,4 +1,5 @@
 using Api.Configs;
+using Api.Setup;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //builder.Services.AddCors(builder.Configuration["Cors:Authorize"]);
+builder.Services.RegisterServices(builder.Configuration);
 
 builder.Host.UseDefaultServiceProvider(options =>
 {
